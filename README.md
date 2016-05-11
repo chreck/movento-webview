@@ -35,11 +35,12 @@ email: mm@napp.dk
 twitter: @nappdev  
 
 **Christoph Eck**
-web: http://http://www.movento.com/
+web: http://www.movento.com/
 
 ## License
 
 Copyright (c) 2010-2013 Mads Moller
+
 Copyright (c) 2016 Christoph Eck, movento Schweiz AG
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
