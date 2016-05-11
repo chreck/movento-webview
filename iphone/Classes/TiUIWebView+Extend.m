@@ -32,7 +32,7 @@
 
 -(void)loadURLRequest:(NSMutableURLRequest*)request
 {
-    NSLog(@"[DEBUG] loadURLRequest");
+    NSLog(@"[DEBUG] loadURLRequest request %@", request);
     
     if (basicCredentials!=nil)
     {
@@ -44,14 +44,17 @@
     {
         // set the new headers
         for(NSString *key in [self.customHeaders allKeys]){
-            NSLog(@"[DEBUG] loadURLRequest headers %@", key);
-            [request addValue:[self.customHeaders objectForKey:key] forHTTPHeaderField:key];
+            NSString *value = [self.customHeaders objectForKey:key];
+            NSLog(@"[INFO] loadURLRequest header key %@ value %@", key, value);
+            [request addValue:value forHTTPHeaderField:key];
         }
     }
 
     if (webview!=nil){
         NSLog(@"[DEBUG] loadURLRequest in webview");
         [webview loadRequest:request];
+    } else {
+        NSLog(@"[WARN] loadURLRequest webview is nil");
     }
 }
 
