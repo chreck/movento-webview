@@ -27,7 +27,7 @@
 
 -(NSDictionary *)customHeaders_
 {
-        return objc_getAssociatedObject(self, @selector(customHeaders));
+    return objc_getAssociatedObject(self, @selector(customHeaders));
 }
 
 -(void)loadURLRequest:(NSMutableURLRequest*)request

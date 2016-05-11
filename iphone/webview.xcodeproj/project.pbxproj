@@ -27,10 +27,13 @@
 		24DE9E1111C5FE74003F90F6 /* ComMoventoWebviewModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* ComMoventoWebviewModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* ComMoventoWebviewModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ComMoventoWebviewModuleAssets.m */; };
 		8F2E04991CE21016007A8509 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2E04981CE21016007A8509 /* UIKit.framework */; };
-		8FA012571CE21A0800755B62 /* JRSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA012531CE21A0800755B62 /* JRSwizzle.h */; };
-		8FA012581CE21A0800755B62 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA012541CE21A0800755B62 /* JRSwizzle.m */; };
-		8FA012591CE21A0800755B62 /* TiUIWebView+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA012551CE21A0800755B62 /* TiUIWebView+Extend.h */; };
-		8FA0125A1CE21A0800755B62 /* TiUIWebView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA012561CE21A0800755B62 /* TiUIWebView+Extend.m */; };
+		8F64EB5F1CE23EE7005684B0 /* JRSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F64EB5B1CE23EE7005684B0 /* JRSwizzle.h */; };
+		8F64EB601CE23EE7005684B0 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F64EB5C1CE23EE7005684B0 /* JRSwizzle.m */; };
+		8F64EB611CE23EE7005684B0 /* TiUIWebView+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F64EB5D1CE23EE7005684B0 /* TiUIWebView+Extend.h */; };
+		8F64EB621CE23EE7005684B0 /* TiUIWebView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F64EB5E1CE23EE7005684B0 /* TiUIWebView+Extend.m */; };
+		8F64EB641CE23F28005684B0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F64EB631CE23F28005684B0 /* Accelerate.framework */; };
+		8F64EB661CE23F33005684B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F64EB651CE23F33005684B0 /* CoreGraphics.framework */; };
+		8F64EB681CE23F3B005684B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F64EB671CE23F3B005684B0 /* QuartzCore.framework */; };
 		AA747D9F0F9514B9006C5449 /* ComMoventoWebview_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComMoventoWebview_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -52,10 +55,13 @@
 		24DE9E0F11C5FE74003F90F6 /* ComMoventoWebviewModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComMoventoWebviewModuleAssets.h; path = Classes/ComMoventoWebviewModuleAssets.h; sourceTree = "<group>"; };
 		24DE9E1011C5FE74003F90F6 /* ComMoventoWebviewModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComMoventoWebviewModuleAssets.m; path = Classes/ComMoventoWebviewModuleAssets.m; sourceTree = "<group>"; };
 		8F2E04981CE21016007A8509 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		8FA012531CE21A0800755B62 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
-		8FA012541CE21A0800755B62 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
-		8FA012551CE21A0800755B62 /* TiUIWebView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TiUIWebView+Extend.h"; sourceTree = "<group>"; };
-		8FA012561CE21A0800755B62 /* TiUIWebView+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TiUIWebView+Extend.m"; sourceTree = "<group>"; };
+		8F64EB5B1CE23EE7005684B0 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRSwizzle.h; path = Classes/JRSwizzle.h; sourceTree = "<group>"; };
+		8F64EB5C1CE23EE7005684B0 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = Classes/JRSwizzle.m; sourceTree = "<group>"; };
+		8F64EB5D1CE23EE7005684B0 /* TiUIWebView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TiUIWebView+Extend.h"; path = "Classes/TiUIWebView+Extend.h"; sourceTree = "<group>"; };
+		8F64EB5E1CE23EE7005684B0 /* TiUIWebView+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TiUIWebView+Extend.m"; path = "Classes/TiUIWebView+Extend.m"; sourceTree = "<group>"; };
+		8F64EB631CE23F28005684B0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		8F64EB651CE23F33005684B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8F64EB671CE23F3B005684B0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AA747D9E0F9514B9006C5449 /* ComMoventoWebview_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComMoventoWebview_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libComMoventoWebview.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComMoventoWebview.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,8 +72,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F2E04991CE21016007A8509 /* UIKit.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				8F64EB681CE23F3B005684B0 /* QuartzCore.framework in Frameworks */,
+				8F64EB661CE23F33005684B0 /* CoreGraphics.framework in Frameworks */,
+				8F64EB641CE23F28005684B0 /* Accelerate.framework in Frameworks */,
+				8F2E04991CE21016007A8509 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +105,9 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F64EB671CE23F3B005684B0 /* QuartzCore.framework */,
+				8F64EB651CE23F33005684B0 /* CoreGraphics.framework */,
+				8F64EB631CE23F28005684B0 /* Accelerate.framework */,
 				8F2E04981CE21016007A8509 /* UIKit.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
@@ -105,10 +117,10 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8FA012531CE21A0800755B62 /* JRSwizzle.h */,
-				8FA012541CE21A0800755B62 /* JRSwizzle.m */,
-				8FA012551CE21A0800755B62 /* TiUIWebView+Extend.h */,
-				8FA012561CE21A0800755B62 /* TiUIWebView+Extend.m */,
+				8F64EB5B1CE23EE7005684B0 /* JRSwizzle.h */,
+				8F64EB5C1CE23EE7005684B0 /* JRSwizzle.m */,
+				8F64EB5D1CE23EE7005684B0 /* TiUIWebView+Extend.h */,
+				8F64EB5E1CE23EE7005684B0 /* TiUIWebView+Extend.m */,
 				24DE9E0F11C5FE74003F90F6 /* ComMoventoWebviewModuleAssets.h */,
 				24DE9E1011C5FE74003F90F6 /* ComMoventoWebviewModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* ComMoventoWebviewModule.h */,
@@ -134,8 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA747D9F0F9514B9006C5449 /* ComMoventoWebview_Prefix.pch in Headers */,
-				8FA012571CE21A0800755B62 /* JRSwizzle.h in Headers */,
-				8FA012591CE21A0800755B62 /* TiUIWebView+Extend.h in Headers */,
+				8F64EB5F1CE23EE7005684B0 /* JRSwizzle.h in Headers */,
+				8F64EB611CE23EE7005684B0 /* TiUIWebView+Extend.h in Headers */,
 				24DD6CF91134B3F500162E58 /* ComMoventoWebviewModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* ComMoventoWebviewModuleAssets.h in Headers */,
 			);
@@ -212,8 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DD6CFA1134B3F500162E58 /* ComMoventoWebviewModule.m in Sources */,
-				8FA012581CE21A0800755B62 /* JRSwizzle.m in Sources */,
-				8FA0125A1CE21A0800755B62 /* TiUIWebView+Extend.m in Sources */,
+				8F64EB601CE23EE7005684B0 /* JRSwizzle.m in Sources */,
+				8F64EB621CE23EE7005684B0 /* TiUIWebView+Extend.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* ComMoventoWebviewModuleAssets.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +276,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				TITANIUM_SDK_VERSION = 5.2.2.GA;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -297,6 +310,7 @@
 				PRODUCT_NAME = ComMoventoWebview;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				TITANIUM_SDK_VERSION = 5.2.2.GA;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
