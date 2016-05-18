@@ -8,4 +8,4 @@ require('com.movento.webview');
 var webView = Ti.UI.createWebView({
     url: 'http://www.appcelerator.com'
 });
-webView.setCustomHeaders({'my-customheader-1': 'custom-header-value', 'add-as-many-headers-as-you-need': 'value'});
+webView.setRequestHeaders({'my-customheader-1': 'custom-header-value', 'add-as-many-headers-as-you-need': 'value'});

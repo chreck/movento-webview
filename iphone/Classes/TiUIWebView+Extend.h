@@ -14,5 +14,6 @@
 
 @interface TiUIWebView (Extend)
 
-@property (nonatomic, retain)  NSDictionary *customHeaders;
+@property (nonatomic, retain)  NSDictionary *requestHeaders;
+
 @end
