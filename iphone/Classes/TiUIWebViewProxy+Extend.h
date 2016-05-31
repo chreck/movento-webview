@@ -9,6 +9,9 @@
 #import "TiUIWebViewProxy.h"
 
 @interface TiUIWebViewProxy (Extend) {
+    
 }
+
+-(id)getScrollHeight:(id)args;
 
 @end

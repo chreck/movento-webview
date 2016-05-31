@@ -16,4 +16,5 @@
 
 @property (nonatomic, retain)  NSDictionary *requestHeaders;
 
+- (float) getWebViewHeight;
 @end

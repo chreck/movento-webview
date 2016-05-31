@@ -62,4 +62,9 @@
     }
 }
 
+- (float) getWebViewHeight{
+    float height = webview.scrollView.contentSize.height;
+    return height;
+}
+
 @end
