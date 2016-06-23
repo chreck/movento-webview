@@ -16,13 +16,6 @@ tmp/
 *.bak
 *.swp
 *~.nib
-local.properties
-.settings/
-.loadpath
-.recommenders
-
-# Eclipse Core
-.project
 
 # External tool builders
 .externalToolBuilders/
@@ -35,9 +28,6 @@ local.properties
 
 # CDT-specific (C/C++ Development Tooling)
 .cproject
-
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
 
 # Java annotation processor (APT)
 .factorypath
@@ -131,3 +121,6 @@ captures/
 ### Android Patch ###
 gen-external-apklibs
 
+copy_to_project.sh
+android/dist/
+android/libs/

@@ -6,26 +6,46 @@ This module extends the native UI component TiUIWebView provided by the Titanium
 
 This is not a set of new TiUIWebView component. Instead, we are extending the existing framework.
 
-## Accessing the Module
+### Motivation
 
-Instantiate the module through ```require();```  This will modify and override the native Titanium classes.  
-
-## Reference
-
-### WebView
-
-* Custom request headers for WebView
+It is not possible to set custom request headers on Android and iOS (open jira https://jira.appcelerator.org/browse/TIMOB-17467). To get the correct height from a webview it is necessary to use evalJS. But this can be wrong and it is slow.
 
 ```javascript
-var webView = Ti.UI.createWebView({
-url: 'http://www.appcelerator.com'
+webview.addEventListener('load', function(event){
+Ti.API.info("height " + e.source.evalJS("document.height;"); 
 });
-webView.setCustomHeaders({'my-customheader-1': 'custom-header-value', 'add-as-many-headers-as-you-need': 'value'});
+```
+The implemenation is based on some ideas from 
+https://github.com/viezel/NappUI and
+https://github.com/m1ga/titanium_mobile/commit/9555725b2fe532bd7f7c46a59fc911da9df6b6da
+
+
+## Accessing the Module
+
+Copy the following into the alloy.js file
+
+```javascript
+// to init webview automatically with Alloy for OS_ANDROID
+if(OS_ANDROID) {
+    Ti.UI.createWebView = require('com.movento.webview').createWebView;
+}
 ```
 
+```javascript
+var webview = Ti.UI.createWebView();
+webview.setRequestHeaders({'my-customheader-1': 'custom-header-value', 'add-as-many-headers-as-you-need': 'value'});
+webview.addEventListener('load', function(event){
+    Ti.API.info("getScrollHeight " + event.source.getScrollHeight()); 
+});
+webview.setUrl("http://www.google.com");
+```
 ## Changelog
 
 see CHANGELOG.txt
+
+### Build
+
+Call ./build.sh file in terminal
 
 ## Author
 
