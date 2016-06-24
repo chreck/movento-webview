@@ -25,11 +25,19 @@ https://github.com/m1ga/titanium_mobile/commit/9555725b2fe532bd7f7c46a59fc911da9
 Copy the following into the alloy.js file
 
 ```javascript
-// to init webview automatically with Alloy for OS_ANDROID
+// to create the correct webview automatically in OS_ANDROID
 if(OS_ANDROID) {
     Ti.UI.createWebView = require('com.movento.webview').createWebView;
 }
 ```
+
+On the android device it can not load the correct module. Use the following for defining in Alloy. 
+
+```xml
+<WebView platform="android" module="com.movento.webview" id="webView"/>
+<WebView platform="ios" id="webView"/>
+```
+
 
 ```javascript
 var webview = Ti.UI.createWebView();
