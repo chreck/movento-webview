@@ -37,6 +37,7 @@ import ti.modules.titanium.ui.WebViewProxy;
 import ti.modules.titanium.ui.android.AndroidModule;
 import android.content.Context;
 import android.content.pm.FeatureInfo;
+import android.content.pm.ApplicationInfo;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.net.Uri;
@@ -185,6 +186,14 @@ public class TiUIWebView extends TiUIView
 	public TiUIWebView(TiViewProxy proxy)
 	{
 		super(proxy);
+        
+		// We can only support debugging in API 19 and higher
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+			// Only enable webview debugging, when app is debuggable
+			if (0 != (proxy.getActivity().getApplicationContext().getApplicationInfo().flags &= ApplicationInfo.FLAG_DEBUGGABLE)) {
+				WebView.setWebContentsDebuggingEnabled(true);
+			}
+		}
 		
 		TiWebView webView = isHTCSenseDevice() ? new TiWebView(proxy.getActivity()) : new NonHTCWebView(proxy.getActivity());
 		webView.setVerticalScrollbarOverlay(true);
@@ -235,7 +244,10 @@ public class TiUIWebView extends TiUIView
 		if (Build.VERSION.SDK_INT > 16 || enableJavascriptInterface) {
 			client.getBinding().addJavascriptInterfaces();
 		}
-
+		//setLayerType() is supported in API 11+
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+			webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+		}
 		webView.client = client;
 
 		if (proxy instanceof WebViewProxy) {
@@ -469,11 +481,12 @@ public class TiUIWebView extends TiUIView
 			getWebView().getSettings().setLoadWithOverviewMode(true);
 		}
 		isLocalHTML = false;
-		if (extraHeaders.size()>0){
+		if (extraHeaders.size() > 0){
  			getWebView().loadUrl(finalUrl, extraHeaders);
  		} else {
  			getWebView().loadUrl(finalUrl);
  		}
+
 	}
 
 	public void changeProxyUrl(String url)

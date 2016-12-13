@@ -15,4 +15,4 @@ name: movento-webview-android
 moduleid: com.movento.webview
 guid: cfc81424-bf37-4040-9ebe-4f22402ed9fa
 platform: android
-minsdk: 5.1.2.GA
+minsdk: 5.5.1.GA

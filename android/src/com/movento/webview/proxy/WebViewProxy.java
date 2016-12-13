@@ -25,7 +25,6 @@ import org.appcelerator.titanium.proxy.TiViewProxy;
 import org.appcelerator.titanium.util.TiConvert;
 import org.appcelerator.titanium.view.TiUIView;
 
-import ti.modules.titanium.ui.ViewProxy;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -35,7 +34,9 @@ import android.webkit.WebView;
 import com.movento.webview.MoventoWebviewAndroidModule;
 import com.movento.webview.impl.TiUIWebView;
 
+
 @Kroll.proxy(creatableInModule=MoventoWebviewAndroidModule.class, propertyAccessors = {
+	TiC.PROPERTY_BLACKLISTED_URLS,
 	TiC.PROPERTY_DATA,
 	TiC.PROPERTY_ON_CREATE_WINDOW,
 	TiC.PROPERTY_SCALES_PAGE_TO_FIT,
@@ -49,7 +50,7 @@ public class WebViewProxy extends TiViewProxy
 	implements Handler.Callback, OnLifecycleEvent, interceptOnBackPressedEvent
 {
 	private static final String TAG = "WebViewProxy";
-	private static final int MSG_FIRST_ID = ViewProxy.MSG_LAST_ID + 1;
+	private static final int MSG_FIRST_ID = TiViewProxy.MSG_LAST_ID + 1;
 
 	private static final int MSG_GO_BACK = MSG_FIRST_ID + 101;
 	private static final int MSG_GO_FORWARD = MSG_FIRST_ID + 102;
@@ -63,8 +64,9 @@ public class WebViewProxy extends TiViewProxy
 	private static final int MSG_RELEASE = MSG_FIRST_ID + 110;
 	private static final int MSG_PAUSE = MSG_FIRST_ID + 111;
 	private static final int MSG_RESUME = MSG_FIRST_ID + 112;
-	private static final int MSG_SET_HEADER = MSG_FIRST_ID + 113;
-	private static final int MSG_GET_SCROLL_HEIGHT = MSG_FIRST_ID + 114;
+	
+	private static final int MSG_SET_HEADER = MSG_FIRST_ID + 123;
+	private static final int MSG_GET_SCROLL_HEIGHT = MSG_FIRST_ID + 124;
 
 	protected static final int MSG_LAST_ID = MSG_FIRST_ID + 999;
 	private static String fusername;

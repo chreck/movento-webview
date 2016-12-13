@@ -21,7 +21,7 @@ public class MoventoWebviewAndroidModule extends KrollModule
 {
 
 	// Standard Debugging variables
-	private static final String LCAT = "MoventoWebviewAndroidModule";
+	private static final String TAG = "MoventoWebviewAndroidModule";
 	private static final boolean DBG = TiConfig.LOGD;
 
 	// You can define constants with @Kroll.constant, for example:
@@ -30,6 +30,13 @@ public class MoventoWebviewAndroidModule extends KrollModule
 	public MoventoWebviewAndroidModule()
 	{
 		super();
+		Log.i(TAG, "MoventoWebviewAndroidModule");
+	}
+	
+	@Override
+	public String getApiName()
+	{
+		return "com.movento.webview";
 	}
 
 }
