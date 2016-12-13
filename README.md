@@ -17,8 +17,6 @@ Ti.API.info("height " + e.source.evalJS("document.height;");
 ```
 The implemenation is based on some ideas from 
 https://github.com/viezel/NappUI and
-https://github.com/m1ga/titanium_mobile/commit/9555725b2fe532bd7f7c46a59fc911da9df6b6da
-
 
 ## Accessing the Module
 
@@ -38,7 +36,6 @@ On the android device it can not load the correct module. Use the following for 
 <WebView platform="ios" id="webView"/>
 ```
 
-
 ```javascript
 var webview = Ti.UI.createWebView();
 webview.setRequestHeaders({'my-customheader-1': 'custom-header-value', 'add-as-many-headers-as-you-need': 'value'});
@@ -47,6 +44,22 @@ webview.addEventListener('load', function(event){
 });
 webview.setUrl("http://www.google.com");
 ```
+
+If you are using the webview in a window call the setUrl() and setRequestHeaders() after the window fires the 'open' event. I.e. 
+```javascript
+var win = Ti.UI.createWindow({
+});
+var openListener = function(event) {
+	win.add(webview);
+	webview.setRequestHeaders({'my-customheader-1': 'custom-header-value', 'add-as-many-headers-as-you-need': 'value'});
+	webview.setUrl('http://www.google.com');
+};
+win.addEventListener('open', openListener);
+win.open();
+```
+
+The implementation of the request headers will be included when the Jira https://jira.appcelerator.org/browse/TIMOB-17467 is closed. At the moment it is solved in the version of Titanium SDK 6.1.0.
+
 ## Changelog
 
 see CHANGELOG.txt
